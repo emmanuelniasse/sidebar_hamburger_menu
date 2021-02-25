@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #383838;
+    font-family: sans-serif;
+}
+
+.content{
+    color: #09FBBA;
+    transition: 1s;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+p{
+    padding: 2rem 5rem;
+}
+
+.side-bar{
+    position: fixed;
+    width: 230px;
+    height: 100%;
+    background-color: #09FBB1;
+    left: -300px;
+    transition: .5S ease-out;
+    z-index: 4;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 30px;
+    left: 310px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.toggle-btn span{
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+    background: #09FBBA;
+    display: block;
+    margin-top: 4px;
+    transition: .5s ease;
+}
+
+li{
+    color: #292929;
+    list-style-type: none;
+    font-size: 2.5rem;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+li:hover{
+    background: #292929;
+    color: #FCFCFB;
+}
+
+.active{
+    left: 0;
+}
+
+.active .toggle-btn{
+    top: 2.8rem;
+    left: 235px;
+}
+
+.active span{
+    position: absolute;
+}
+
+.active span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+.active span:nth-child(2){
+    opacity: 0;
+}
+
+.active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.active ~ .content{
+    opacity: 0.3;
+}
